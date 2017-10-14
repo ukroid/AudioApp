@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         if (mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
         } else {
-            mediaPlayer.start();
+         if (mediaPlayer.getCurrentPosition() != 0) {mediaPlayer.start();}
         }
 
     }
